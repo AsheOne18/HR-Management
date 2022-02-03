@@ -1,0 +1,19 @@
+#Server Config
+server:
+  port: 9001
+#Spring Config
+spring:
+  #1. Application Config
+  application:
+    name: hr-company
+  #2. DataSource Config
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hr?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: 123456
+  #3. JPA Config
+  jpa:
+    database: MySQL
+    show-sql: true
+    open-in-view: true
