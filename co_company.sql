@@ -18,4 +18,4 @@ CREATE TABLE `co_company` (
     `state` TINYINT(2) NOT NULL DEFAULT '1' COMMENT 'Current State',
     `balance` DOUBLE NOT NULL COMMENT 'Current Balance',
     `create_time` DATETIME NOT NULL COMMENT 'Create Time'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+)
