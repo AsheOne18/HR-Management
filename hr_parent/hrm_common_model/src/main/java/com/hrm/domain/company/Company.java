@@ -1,14 +1,14 @@
 package com.hrm.domain.company;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
+import org.hibernate.Hibernate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author AsheOne
@@ -16,7 +16,10 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "co_company")
-@Data
+@Getter
+@Setter
+@ToString
+@RequiredArgsConstructor
 @AllArgsConstructor
 @NoArgsConstructor
 public class Company implements Serializable {
@@ -100,4 +103,16 @@ public class Company implements Serializable {
      */
     private Date createTime;
 
+    @Override
+    public boolean equals (Object o) {
+        if (this == o) return true;
+        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+        Company company = (Company) o;
+        return id != null && Objects.equals(id, company.id);
+    }
+
+    @Override
+    public int hashCode () {
+        return getClass().hashCode();
+    }
 }
