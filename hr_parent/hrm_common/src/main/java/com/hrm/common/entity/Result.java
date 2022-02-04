@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
  */
 
 @Data
-@NoArgsConstructor
 // Don't display not-null data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result {
@@ -24,6 +23,9 @@ public class Result {
     private Integer code;// return code
     private String message;// return message
     private Object data;// return data
+
+    public Result () {
+    }
 
     public Result(ResultCode code){
         this.success = code.success;

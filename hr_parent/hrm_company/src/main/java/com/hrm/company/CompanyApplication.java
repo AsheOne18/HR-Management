@@ -10,14 +10,10 @@ import org.springframework.context.annotation.Bean;
  * @author AsheOne
  * @date 2022/2/2
  */
-@SpringBootApplication(scanBasePackages = "com.hrm.company") // SpringBoot Scan
+@SpringBootApplication(scanBasePackages = "com.hrm") // SpringBoot Scan
 @EntityScan(value = "com.hrm.domain.company") // JPA Scan
 public class CompanyApplication {
     public static void main (String[] args) {
-
-        /**
-         * Start
-         */
         SpringApplication.run(CompanyApplication.class,args);
     }
 

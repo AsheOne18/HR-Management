@@ -16,12 +16,9 @@ import java.util.Objects;
  */
 @Entity
 @Table(name = "co_company")
-@Getter
-@Setter
-@ToString
-@RequiredArgsConstructor
-@AllArgsConstructor
+@Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class Company implements Serializable {
 
     private static final long serialVersionUID = 594829320797158219L;
@@ -103,16 +100,16 @@ public class Company implements Serializable {
      */
     private Date createTime;
 
-    @Override
-    public boolean equals (Object o) {
-        if (this == o) return true;
-        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Company company = (Company) o;
-        return id != null && Objects.equals(id, company.id);
-    }
-
-    @Override
-    public int hashCode () {
-        return getClass().hashCode();
-    }
+//    @Override
+//    public boolean equals (Object o) {
+//        if (this == o) return true;
+//        if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
+//        Company company = (Company) o;
+//        return id != null && Objects.equals(id, company.id);
+//    }
+//
+//    @Override
+//    public int hashCode () {
+//        return getClass().hashCode();
+//    }
 }
