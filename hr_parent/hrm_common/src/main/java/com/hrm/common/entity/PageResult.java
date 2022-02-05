@@ -16,6 +16,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PageResult<T> {
-    private Long total; //
+    private Long total;
     private List<T> rows;
 }

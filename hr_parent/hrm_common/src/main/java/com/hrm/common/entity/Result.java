@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 // Don't display not-null data
-@JsonInclude(JsonInclude.Include.NON_NULL)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result {
 
     private boolean success;// is success
