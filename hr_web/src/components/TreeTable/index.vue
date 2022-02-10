@@ -1,5 +1,5 @@
 <template>
-    <el-table :data="formatData"  :row-class-name="rowClassStatus" v-loading="listLoading"  element-loading-text="给我一点时间" fit highlight-current-row
+    <el-table :data="formatData"  :row-class-name="rowClassStatus" v-loading="listLoading"  element-loading-text="Wait!!!" fit highlight-current-row
       style="width: 100%">
     <el-table-column v-for="(column, index) in columns" :key="column.prop" :width="column.width" :prop="column.prop"
       :label="column.text">
@@ -23,13 +23,13 @@
           size="mini"
           type="primary"
           @click="handleUpdate(scope.row)">
-          修改
+          Change
         </el-button>
         <el-button
           size="mini"
           type="danger"
           @click="handleDelete(scope.row.id)">
-          删除
+          Delete
         </el-button>
       </template>
     </el-table-column>

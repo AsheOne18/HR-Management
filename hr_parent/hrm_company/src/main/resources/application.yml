@@ -1,6 +1,6 @@
 #Server Config
 server:
-  port: 8081
+  port: 9091
 #Spring Config
 spring:
   #1. Application Config

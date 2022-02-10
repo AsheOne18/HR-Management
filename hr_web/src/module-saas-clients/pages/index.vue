@@ -4,21 +4,32 @@
       <el-card shadow="never">
         <!-- elementui table -->
           <el-table :data="dataList" border style="width: 100%">
-          <el-table-column fixed prop="name" label="Company"></el-table-column>
-          <el-table-column fixed prop="version" label="Version"></el-table-column>
-          <el-table-column fixed prop="companyPhone" label="Phone"></el-table-column>
-          <el-table-column fixed prop="expirationDate" label="Expiration"></el-table-column>
-          <el-table-column fixed prop="state" label="State"></el-table-column>
-          <el-table-column fixed="right" label="操作" width="100">
+          <el-table-column fixed type="index" label="ID" width="50"></el-table-column>
+          <el-table-column fixed prop="name" label="Company" width="200"></el-table-column>
+          <el-table-column fixed prop="version" label="Version" width="150"></el-table-column>
+          <el-table-column fixed prop="companyPhone" label="Phone" width="150"></el-table-column>
+          <el-table-column fixed prop="expirationDate" label="Expiration" width="150"></el-table-column>
+          <el-table-column fixed prop="state" label="State" width="150">
             <template slot-scope="scope">
-              <el-button @click="handleClick(scope.row)" type="text" size="small">Cheak</el-button>
-              <el-button type="text" size="small">Edit</el-button>
+            <el-switch
+              v-model="scope.row.state"
+              inactive-value="0"
+              active-value="1"
+              disabled
+              active-color="#13ce66"
+              inactive-color="#ff4949">
+            </el-switch>
+            </template>
+          </el-table-column>
+          <el-table-column fixed="right" label="Controll" width="150">
+            <template slot-scope="scope">
+              <router-link :to="'/saas-clients/details/'+scope.row.id">Cheak</router-link>
             </template>
           </el-table-column>
         </el-table>
         <!-- elementui table -->
       </el-card>
-     </div>
+     </div> 
   </div>
 </template>
 

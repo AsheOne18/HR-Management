@@ -18,6 +18,12 @@ export default [
         component: _import('saas-clients/pages/index'),
         name: 'saas-clients-index',
         meta: {title: 'SaasEnterprise ', icon: 'component', noCache: true}
+      },
+      {
+        path: 'details/:id',// Request path
+        component: _import('saas-clients/pages/detail'),
+        name: 'saas-clients-detail',
+        meta: {title: 'SaasDetails ', icon: 'component', noCache: true}
       }
     ]
   }
